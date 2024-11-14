@@ -54,7 +54,7 @@ describe('Проверка авторизации', function () {
  
  it('Приведение к строчным буквам в логине', function () {
     cy.visit('https://login.qa.studio/');// зашли на сайт
-   cy.get('#mailForgot').type('GerMan@Dolnikov.ru');//ввели логин
+   cy.get('#mail').type('GerMan@Dolnikov.ru');//ввели логин
    cy.get('#pass').type('iLoveqastudio1');// ввели верный пароль
    cy.get('#loginButton').click();//нажали войти
    cy.get('#messageHeader').contains('Авторизация прошла успешно');//проверяю, что после авторизации вижу текст
